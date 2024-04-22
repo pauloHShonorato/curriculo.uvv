@@ -1,0 +1,409 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+
+}
+
+body{
+    background-color: rgb(247, 247, 247);
+    height: 100vh;
+}
+
+h2.titulo{
+    color: #0a0b14;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+color: #0609d1;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+header{
+    padding: 40px;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #0a0b14;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    position: relative;
+    padding: 5px;
+}
+
+header a:hover{
+    color: #fff;
+    transform: scale(1.2);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+ul li a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0609d1;
+    z-index: -1;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: 0.2s;
+}
+
+ul li a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform 0.2s;
+    border-radius: 20px;
+
+}
+
+header .botaocontato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #0609d1;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+header .botaocontato button:hover{
+    box-shadow: 0px 0px 8px #3246f8;
+    color: #fff;
+}
+
+
+section.topodosite{
+    padding: 40px 4%;
+}
+
+section.topodosite .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+}
+
+.topodosite h1{
+    font-size: 48px;
+    line-height: 40px;
+}
+
+.topodosite p{
+    margin: 40px 0;
+}
+
+.topodosite .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+section.experiencia{
+    padding: 80px 4%;
+}
+
+section.experiencia .flex{
+    gap: 60px;
+}
+
+.experiencia .especialidadesbox{
+    padding: 40px;
+    border-radius: 25px;
+    margin-top: 45px;
+    transition: 1.2s;
+}
+
+.experiencia .especialidadesbox:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #0609d185;
+}
+
+.experiencia .especialidadesbox i{
+    font-size: 65px;
+    color: #0609d1;
+}
+
+.experiencia .especialidadesbox h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+section.sobre{
+    padding: 40px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #0a0b14;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #0609d1;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.section .skills{
+    padding: 80px;
+}
+
+.Habilidades .skills h1
+
+.skills{
+    width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #ccc;
+    color: #000000;
+    box-shadow: 0 15px 20px #0f0f0f;
+}
+
+.skills ul{
+    list-style:none;
+}
+
+.skills ul li{
+    margin: 20px 0;
+}
+
+.skills .barras{
+    background-color: #f7ecec;
+    display: block;
+    height: 20px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.barras > span{
+    height: 20px;
+    background: linear-gradient(to right, #295dee,#7c2efa);
+    position: absolute;
+}
+
+.html{
+    width: 70%;
+    animation: html 3s;
+}
+
+.css{
+    width: 45%;
+    animation: css 3s;
+}
+
+.javascrip{
+    width: 20%;
+    animation: javascrip 3s;
+}
+
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 45%;
+    }
+}
+@keyframes javascrip {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 20%;
+    }
+}
+
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #ccc;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #000000;
+    font-size: 18px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .enviar input{
+    width: 120px;
+    background-color: #0609d1;
+    color: #000000;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+footer{
+    padding: 40px 4%;
+    box-shadow: #3218c5;
+    color: #000000;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px;
+}
+
+.borda{
+    border-top: 2px solid #000000;
+}
+
+.bnt-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0609d1;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+footer .line-footer p i{
+    color: #0609d1;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #000000;
+}
+
+@media screen and (max-width: 1020px){
+/* Classes gerais */
+.flex{
+    flex-direction: column;
+}
+
+.topodosite .flex{
+    flex-direction: column-reverse;
+}
+
+    
+/* CABEÇALHO */
+    .Menu-pc, .botaocontato{
+        display: none;
+    }
+
+    section.topodosite .flex{
+        gap: 40pxpx;
+    }
+    
+    section.topodosite{
+        padding: 20px 8%;
+    }
+    .topodosite h1{
+        font-size: 30px;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .img-sobre img{
+        width: 100%;
+        height: 100%;
+    }
+
+    footer .flex {
+        flex-direction: column;
+    }
+
+    footer .line-footer {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
